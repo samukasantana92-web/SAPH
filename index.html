@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SAPH — Índice de Prioridade Humanitária</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/icon-192.png">
+    <meta name="description" content="Sistema de Avaliação e Priorização Humanitária">
+    <meta name="theme-color" content="#06283D">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+</head>
+
+<body>
+
+    <header class="topo">
+        <img src="assets/logo.png" alt="Logo SAPH" class="logo">
+
+        <div>
+            <h1>SAPH</h1>
+            <p>Sistema de Avaliação e Priorização Humanitária</p>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="boas-vindas">
+            <h2>Gestão humanitária inteligente</h2>
+
+            <p>
+                Avalie as necessidades dos abrigos e identifique
+                quais situações precisam de atendimento prioritário.
+            </p>
+
+            <button onclick="abrirFormulario()">
+                Avaliar abrigo
+            </button>
+        </section>
+
+        <section id="formulario" class="card escondido">
+
+            <h2>Avaliação do abrigo</h2>
+
+            <label>
+                Nº de pessoas
+                <input type="number" id="pessoas" min="0" value="0">
+            </label>
+
+            <label>
+                Nº de crianças (0-12 anos)
+                <input type="number" id="criancas" min="0" value="0">
+            </label>
+
+            <label>
+                Nº de idosos (60+ anos)
+                <input type="number" id="idosos" min="0" value="0">
+            </label>
+
+            <label>
+                Pessoas com deficiência (nº)
+                <input type="number" id="pcd" min="0" value="0">
+            </label>
+
+            <label>
+                Horas desde a última entrega
+                <input type="number" id="tempo" min="0" value="0">
+            </label>
+
+            <label>
+                Nº de gestantes
+                <input type="number" id="gestantes" min="0" value="0">
+            </label>
+
+            <label>
+                Estoque restante água/alimento (%)
+                <input type="number" id="estoque" min="0" max="100" value="0">
+            </label>
+
+            <button onclick="calcularIPH()">
+                Calcular IPH
+            </button>
+
+        </section>
+
+        <section id="resultado" class="resultado escondido">
+
+            <h2>Índice de Prioridade Humanitária</h2>
+
+            <div class="numero" id="valorIPH">
+                0
+            </div>
+
+            <p id="classificacao"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>SAPH — Sistema de Avaliação e Priorização Humanitária</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

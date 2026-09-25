@@ -1,0 +1,197 @@
+:root {
+    --azul: #06283D;
+    --azul-2: #0A3448;
+    --verde: #237276;
+
+    --vermelho: #E31E2B;
+    --laranja: #F47B35;
+    --amarelo: #F9C23D;
+
+    --branco: #FFFFFF;
+    --cinza: #F2F4F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--azul);
+    color: var(--branco);
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+.topo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 25px;
+
+    background: var(--azul-2);
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.topo h1 {
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+.topo p {
+    color: #dce5e8;
+    margin-top: 5px;
+}
+
+/* CONTEÚDO */
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* TELA INICIAL */
+
+.boas-vindas {
+    background: var(--azul-2);
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    border-left: 6px solid var(--laranja);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.boas-vindas h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.boas-vindas p {
+    color: #dce5e8;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* BOTÕES */
+
+button {
+    background: var(--laranja);
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 14px 24px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/* FORMULÁRIO */
+
+.card {
+    margin-top: 25px;
+
+    background: white;
+    color: #17242b;
+
+    padding: 30px;
+
+    border-radius: 18px;
+}
+
+.card h2 {
+    margin-bottom: 25px;
+    color: var(--azul);
+}
+
+label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-weight: bold;
+}
+
+input {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 7px;
+
+    padding: 12px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--laranja);
+}
+
+/* RESULTADO */
+
+.resultado {
+    margin-top: 25px;
+
+    background: var(--azul-2);
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+.numero {
+    font-size: 70px;
+
+    font-weight: bold;
+
+    color: var(--laranja);
+
+    margin: 20px 0;
+}
+
+/* UTILITÁRIO */
+
+.escondido {
+    display: none;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #aebec5;
+}
